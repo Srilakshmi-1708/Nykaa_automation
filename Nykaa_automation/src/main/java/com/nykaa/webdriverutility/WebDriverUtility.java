@@ -18,6 +18,10 @@ public class WebDriverUtility {
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
  }
  
+ public void maximizeWindow(WebDriver driver) {
+	    driver.manage().window().maximize();
+ }
+ 
  public void waitforElementPresent(WebDriver driver,WebElement element) {
 	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	wait.until(ExpectedConditions.visibilityOf(element));

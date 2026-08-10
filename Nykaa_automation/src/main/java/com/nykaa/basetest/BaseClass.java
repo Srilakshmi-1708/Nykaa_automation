@@ -64,6 +64,13 @@ public class BaseClass {
 		@BeforeMethod(groups= {"smokeTest","regressionTest"})
 		public void configBM() throws Throwable {
 			System.out.println("=Login=");
+			 String url = fLib.getDataFromPropertiesFile("baseUrl");
+
+		        driver.get(url);
+
+		        wLib.waitForPageToLoad(driver);
+
+		        System.out.println("Nykaa application opened");
 			LoginPage lp=new LoginPage(driver);
 			
 			
