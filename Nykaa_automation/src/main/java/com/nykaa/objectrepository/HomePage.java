@@ -7,22 +7,49 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-	
-	WebDriver driver;                     //Rule 2:Object Creation
+
+	WebDriver driver; // Rule 2:Object Creation
+
 	public HomePage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-   
 
+	@FindBy(xpath = "//span[text()='Gift Card']/ancestor::a")
+	private WebElement giftCardLink;
 
-   
-  
-	
-   
-   
+	@FindBy(xpath = "//button[@class='css-1gzc5zn']")
+	private WebElement signInButton;
+
+	@FindBy(xpath = "//input[contains(@placeholder,'Search')]")
+	private WebElement searchBox;
+
+	@FindBy(xpath = "//button[@id='header-bag-icon']")
+	private WebElement bagIcon;
+
+	@FindBy(xpath = "//*[contains(normalize-space(),'Account')]")
+	private WebElement accountIcon;
+
+	public void clickSignIn() {
+		signInButton.click();
+	}
+
+	public WebElement getGiftCardLink() {
+		return giftCardLink;
+	}
+
+	public void searchProduct(String productName) {
+		searchBox.click();
+		searchBox.sendKeys(productName);
+		searchBox.submit();
+	}
+
+	public void clickBag() {
+		bagIcon.click();
+	}
+
+	public void clickAccount() {
+		accountIcon.click();
+	}
+
 }
-
-
-

@@ -35,8 +35,7 @@ public class BaseClass {
 		public void configBS() throws Throwable  {
 			 System.out.println("===Connect to DB,Report Config===");
 			//have to connect to DB
-			
-			}
+		}
 	 	
 	   // @Parameters("BROWSER")
 		@BeforeClass(groups= {"smokeTest","regressionTest"})
@@ -58,16 +57,19 @@ public class BaseClass {
 		    	 driver=new ChromeDriver();
 		     }
 		    sdriver=driver;
-		    UtilityClassObject.setdriver(driver);  
+		    UtilityClassObject.setdriver(driver); 
+		    wLib.toMaximize(driver);
+		    driver.get(fLib.getDataFromPropertiesFile("url"));
+		    wLib.waitForPageToLoad(driver);
+		    
 		} 
 		
 		@BeforeMethod(groups= {"smokeTest","regressionTest"})
 		public void configBM() throws Throwable {
 			System.out.println("=Login=");
 			LoginPage lp=new LoginPage(driver);
-			
-			
-		}
+ 			
+			}
 		
 		@AfterMethod(groups= {"smokeTest","regressionTest"})
 		public void configAM() {
@@ -86,8 +88,7 @@ public class BaseClass {
 		public void configAS() {
 			System.out.println("===Close DB,Report backUP===");
 			//close DBConnection
-			
-			}
+	}
 		
 
 }
