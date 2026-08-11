@@ -9,7 +9,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtility {
 public String getDataFromExcel(String SheetName,int rowNum, int cellNum) throws Throwable {
-	FileInputStream fis=new FileInputStream("./testdata/testscriptdata.xlsx");
+	FileInputStream fis=new FileInputStream("./src/test/resources/configAppData/GiftCardTestData.xlsx");
 	Workbook wb=WorkbookFactory.create(fis);
 	String data=wb.getSheet(SheetName).getRow(rowNum).getCell(cellNum).getStringCellValue();
 	 wb.close();

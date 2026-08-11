@@ -4,9 +4,9 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -19,10 +19,11 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
  }
  
  public void waitforElementPresent(WebDriver driver,WebElement element) {
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(25));
 	wait.until(ExpectedConditions.visibilityOf(element));
 	}
-
+ 
+ 
  public void switchToTabOnUrl(WebDriver driver,String partialUrl) {
 	 Set<String> set=driver.getWindowHandles();
 	 Iterator<String> it=set.iterator();
@@ -37,6 +38,33 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		}
 	 }
  }
+ 
+ public void scrollToElement(WebDriver driver,WebElement ele)
+ {
+	 JavascriptExecutor js=(JavascriptExecutor)driver;
+	 js.executeScript("arguments[0].scrollIntoView(true);",ele);
+ }
+ 
+ public void scrollToBottom(WebDriver driver) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	}
+ 
+ 
+ 
+ public void scrollToElementA(WebDriver driver, WebElement ele) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript(
+	        "arguments[0].scrollIntoView({behavior:'instant', block:'center', inline:'nearest'});",
+	        ele
+	    );
+	}
+ 
+ public String getUrl(WebDriver driver)
+ {
+	 return driver.getCurrentUrl();
+ }
+ 
  
  public void switchToTabOnTitle(WebDriver driver,String partialTitle) {
 	 Set<String> set=driver.getWindowHandles();
@@ -93,7 +121,21 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	 act.doubleClick(element).perform();
  }
  
+ public void toMaximize(WebDriver driver)
+ {
+	 driver.manage().window().maximize();
+ }
  
+ public void toGetTitle(WebDriver driver)
+ {
+	 driver.getTitle();
+ }
+ 
+ public void toWaitForElementToBeClickable(WebDriver driver,WebElement ele)
+ {
+	 WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+	 wait.until(ExpectedConditions.elementToBeClickable(ele));
+ }
 }
 
 
