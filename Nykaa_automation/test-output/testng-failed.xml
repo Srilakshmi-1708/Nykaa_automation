@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.nykaa.checkout.GuestCheckoutTest">
+        <methods>
+          <include name="tc_pw_e2e_001_guestCheckoutFlow"/>
+          <include name="configAM"/>
+          <include name="configBM"/>
+          <include name="configAC"/>
+          <include name="configAS"/>
+          <include name="configBC"/>
+          <include name="configBS"/>
+        </methods>
+      </class> <!-- com.nykaa.checkout.GuestCheckoutTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
