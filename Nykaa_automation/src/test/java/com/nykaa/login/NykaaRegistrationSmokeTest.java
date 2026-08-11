@@ -46,15 +46,22 @@ public class NykaaRegistrationSmokeTest extends RegisterBaseClass {
 
         // Step 5: Click Send OTP
         loginPage.clickSendOTP();
+        Thread.sleep(10000);
+        
+        String mobile1 =
+                fLib.getDataFromPropertiesFile("newMobile");
+
+        loginPage.enterMobileNumber(mobile1);
 
 
+        loginPage.clickGetOTPButton();
         // Step 6: Enter OTP
      //   String otp =
            //     fLib.getDataFromPropertiesFile("otp");
 
        // loginPage.enterOTP(otp);
         
-        Thread.sleep(8000);
+        Thread.sleep(10000);
 
         // Step 7: Verify OTP
         loginPage.clickVerifyOTP();

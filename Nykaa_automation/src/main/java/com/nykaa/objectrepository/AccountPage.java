@@ -15,16 +15,16 @@ public class AccountPage {
     WebDriverWait wait;
 
 
-    @FindBy(xpath = "//*[contains(text(),'Account') or contains(text(),'Profile')]")
-    WebElement account;
+    @FindBy(xpath = "//button[@class='css-bw48aa euw1lbv3']")
+    private WebElement account;
 
 
     @FindBy(xpath = "//*[contains(text(),'My Orders') or contains(text(),'Orders')]")
-    WebElement myOrders;
+    private WebElement myOrders;
 
 
     @FindBy(xpath = "//*[contains(text(),'Logout') or contains(text(),'Log out')]")
-    WebElement logout;
+    private WebElement logout;
 
 
     public AccountPage(WebDriver driver) {

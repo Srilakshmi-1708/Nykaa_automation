@@ -44,8 +44,15 @@ public class LoginPage extends WebDriverUtility{ //Rule 1: create a seperate jav
 	    
 	    @FindBy(xpath = "//*[contains(text(),'Continue') or contains(text(),'Send OTP')]")
 	    WebElement continueButton;
+	    
+	    @FindBy(xpath= "//button[@class='css-15q5a8e']")
+	    private WebElement getOTPButton;
 
-	    public boolean isLoginSignupPopupDisplayed() {
+	    public void clickGetOTPButton() {
+			getOTPButton.click();
+		}
+
+		public boolean isLoginSignupPopupDisplayed() {
 	        return loginSignupPopup.isDisplayed();
 	    }
 

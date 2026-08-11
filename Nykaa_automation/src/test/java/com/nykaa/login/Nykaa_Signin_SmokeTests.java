@@ -39,7 +39,7 @@ public class Nykaa_Signin_SmokeTests extends BaseClass {
         // Step 5: Click Send OTP
         loginPage.clickSendOTP();
         
-        Thread.sleep(8000);
+        Thread.sleep(10000);
 
         // Step 6: Enter valid OTP
       //  loginPage.enterOTP(

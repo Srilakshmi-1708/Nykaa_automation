@@ -28,7 +28,7 @@ public class E2ERegistrationToCheckoutTest extends RegisterBaseClass {
         loginPage.clickContinue();
 
         // Step 4 - Enter OTP
-        loginPage.enterOTP("YOUR_TEST_OTP");
+       loginPage.enterOTP("YOUR_TEST_OTP");
 
         // Step 5 - Verify OTP
         loginPage.clickVerifyOTP();

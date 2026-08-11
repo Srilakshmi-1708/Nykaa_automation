@@ -19,7 +19,7 @@ public class ProductPage {
     WebElement firstProduct;
 
 
-    @FindBy(xpath = "//*[contains(text(),'Add to Bag') or contains(text(),'ADD TO BAG')]")
+    @FindBy(xpath = "(//span[text()='Add to Bag'])[1]")
     WebElement addToBag;
 
 
@@ -42,7 +42,7 @@ public class ProductPage {
 
 
     public void addProductToBag() {
-
+     
         wait.until(ExpectedConditions.elementToBeClickable(addToBag));
 
         addToBag.click();
