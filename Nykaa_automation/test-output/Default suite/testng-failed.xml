@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nykaa.login.NykaaRegistrationSmokeTest">
+      <class name="com.nykaa.login.E2ERegistrationToCheckoutTest">
         <methods>
           <include name="configAM"/>
           <include name="configBM"/>
-          <include name="NYK_REG_001_registerUsingValidMobile"/>
+          <include name="registrationToCheckout"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBC"/>
           <include name="configBS"/>
         </methods>
-      </class> <!-- com.nykaa.login.NykaaRegistrationSmokeTest -->
+      </class> <!-- com.nykaa.login.E2ERegistrationToCheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

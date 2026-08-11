@@ -1,11 +1,15 @@
 package com.nykaa.login;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.nykaa.basetest.BaseClass;
 import com.nykaa.objectrepository.HomePage;
 import com.nykaa.objectrepository.LoginPage;
+import com.nykaa.listenerutility.ListImpClass;
+
+@Listeners(ListImpClass.class)
 
 public class Nykaa_Signin_SmokeTests extends BaseClass {
 
@@ -34,11 +38,13 @@ public class Nykaa_Signin_SmokeTests extends BaseClass {
 
         // Step 5: Click Send OTP
         loginPage.clickSendOTP();
+        
+        Thread.sleep(8000);
 
         // Step 6: Enter valid OTP
-        loginPage.enterOTP(
-                fLib.getDataFromPropertiesFile("otp")
-        );
+      //  loginPage.enterOTP(
+           //     fLib.getDataFromPropertiesFile("otp")
+     //   );
 
         // Step 7: Verify OTP
         loginPage.clickVerifyOTP();

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+
+        <listener
+            class-name="com.nykaa.listenerutility.ListImpClass"/>
+
+    </listeners>
+  <test thread-count="5" name="Nyka Smoke Test">
+    <classes>
+      <class name="com.nykaa.login.NykaaRegistrationSmokeTest"/>
+      <class name="com.nykaa.login.Nykaa_Signin_SmokeTests"/>
+    </classes>
+  </test> <!-- Nyka Smoke Test -->
+</suite> <!-- Suite -->

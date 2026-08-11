@@ -20,11 +20,12 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.nykaa.basetest.BaseClass;
+import com.nykaa.basetest.RegisterBaseClass;
 import com.nykaa.webdriverutility.UtilityClassObject;
 
 
 
-public class ListImpClass extends BaseClass implements ITestListener,ISuiteListener{
+public class ListImpClass extends RegisterBaseClass implements ITestListener,ISuiteListener{
 	public ExtentSparkReporter spark;
 	public static ExtentReports report;
 	public static  ExtentTest test;
