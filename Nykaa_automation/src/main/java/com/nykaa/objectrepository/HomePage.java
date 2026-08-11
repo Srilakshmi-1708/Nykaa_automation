@@ -15,6 +15,29 @@ public class HomePage {
 	}
 	
    
+	@FindBy(xpath = "//input[@name='search-suggestions-nykaa']")
+	private WebElement searchTF;
+	public WebElement getSearchTF() {
+		return searchTF;
+	}
+	
+	@FindBy(xpath = "//nav[@id='my-menu']/descendant::a[text()='makeup']")
+	private WebElement makeupMenu;
+	public WebElement getMakeupMenu() {
+		return makeupMenu;
+	}
+	
+	@FindBy(xpath = "//nav[@id='my-menu']/descendant::a[text()='hair']")
+	private WebElement hairMenu;
+	public WebElement getHairMenu() {
+		return hairMenu;
+	}
+	
+	@FindBy(xpath = "//a[text()='brands']")
+	private WebElement brandsMenu;
+	public WebElement getBrandsMenu() {
+		return brandsMenu;
+	}
 
 
    

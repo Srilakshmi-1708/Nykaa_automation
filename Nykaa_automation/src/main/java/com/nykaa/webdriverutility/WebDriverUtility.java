@@ -93,6 +93,11 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	 act.doubleClick(element).perform();
  }
  
+ public void scrollToElement(WebDriver wd,WebElement element) {
+		Actions act=new Actions(wd);
+		act.scrollToElement(element).perform();
+	}
+ 
  
 }
 
