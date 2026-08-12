@@ -1,94 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-11T12:52:42 IST" name="Default suite" finished-at="2026-08-11T12:53:57 IST" duration-ms="74594">
+  <suite started-at="2026-08-11T22:10:33 IST" name="Default suite" finished-at="2026-08-11T22:11:26 IST" duration-ms="53230">
     <groups>
       <group name="smokeTest">
-        <method signature="GuestCheckoutTest.tc_pw_e2e_001_guestCheckoutFlow()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" name="tc_pw_e2e_001_guestCheckoutFlow" class="com.nykaa.checkout.GuestCheckoutTest"/>
+        <method signature="ProductRatingTest.tc_verifyProductRating()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" name="tc_verifyProductRating" class="com.nykaa.rating.ProductRatingTest"/>
       </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2026-08-11T12:52:42 IST" name="Default test" finished-at="2026-08-11T12:53:57 IST" duration-ms="74594">
-      <class name="com.nykaa.checkout.GuestCheckoutTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:52:42 IST" name="configBS" finished-at="2026-08-11T12:52:42 IST" duration-ms="20" status="PASS">
+    <test started-at="2026-08-11T22:10:33 IST" name="Default test" finished-at="2026-08-11T22:11:26 IST" duration-ms="53230">
+      <class name="com.nykaa.rating.ProductRatingTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:10:33 IST" name="configBS" finished-at="2026-08-11T22:10:33 IST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:52:42 IST" name="configBC" finished-at="2026-08-11T12:52:46 IST" duration-ms="3976" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:10:33 IST" name="configBC" finished-at="2026-08-11T22:10:39 IST" duration-ms="6235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:52:46 IST" name="configBM" finished-at="2026-08-11T12:52:46 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:10:39 IST" name="configBM" finished-at="2026-08-11T22:10:39 IST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="tc_pw_e2e_001_guestCheckoutFlow()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:52:46 IST" name="tc_pw_e2e_001_guestCheckoutFlow" description="TC_PW_E2E_001 - Guest checkout flow through to Place Order visibility" finished-at="2026-08-11T12:53:56 IST" duration-ms="69657" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Cash on delivery')] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.108, chrome: {chromedriverVersion: 151.0.7922.77 (ff37cfca2101..., userDataDir: C:\Users\Kavitha\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65137}, goog:processID: 1920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65137/devtoo..., se:cdpVersion: 151.0.7922.108, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: edd744e1810cf3efd122832fbc179b6b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Cash on delivery')] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.108, chrome: {chromedriverVersion: 151.0.7922.77 (ff37cfca2101..., userDataDir: C:\Users\Kavitha\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65137}, goog:processID: 1920, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65137/devtoo..., se:cdpVersion: 151.0.7922.108, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: edd744e1810cf3efd122832fbc179b6b
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.nykaa.objectrepository.GuestCheckoutPage.safeClick(GuestCheckoutPage.java:80)
-at com.nykaa.objectrepository.GuestCheckoutPage.selectCashOnDelivery(GuestCheckoutPage.java:172)
-at com.nykaa.checkout.GuestCheckoutTest.tc_pw_e2e_001_guestCheckoutFlow(GuestCheckoutTest.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="tc_verifyProductRating()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:10:39 IST" name="tc_verifyProductRating" description="Verify product&#039;s overall rating on PDP" finished-at="2026-08-11T22:11:24 IST" duration-ms="44705" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc_pw_e2e_001_guestCheckoutFlow -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:53:56 IST" name="configAM" finished-at="2026-08-11T12:53:56 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- tc_verifyProductRating -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:11:24 IST" name="configAM" finished-at="2026-08-11T22:11:24 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:53:56 IST" name="configAC" finished-at="2026-08-11T12:53:57 IST" duration-ms="806" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:11:24 IST" name="configAC" finished-at="2026-08-11T22:11:26 IST" duration-ms="2092" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:com.nykaa.checkout.GuestCheckoutTest@65e98b1c]" started-at="2026-08-11T12:53:57 IST" name="configAS" finished-at="2026-08-11T12:53:57 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:com.nykaa.rating.ProductRatingTest@65e98b1c]" started-at="2026-08-11T22:11:26 IST" name="configAS" finished-at="2026-08-11T22:11:26 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- com.nykaa.checkout.GuestCheckoutTest -->
+      </class> <!-- com.nykaa.rating.ProductRatingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

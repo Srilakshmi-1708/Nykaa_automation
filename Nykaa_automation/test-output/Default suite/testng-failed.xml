@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nykaa.checkout.GuestCheckoutTest">
+      <class name="com.nykaa.rating.ProductRatingTest">
         <methods>
-          <include name="tc_pw_e2e_001_guestCheckoutFlow"/>
           <include name="configAM"/>
           <include name="configBM"/>
+          <include name="tc_verifyProductRating"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBC"/>
           <include name="configBS"/>
         </methods>
-      </class> <!-- com.nykaa.checkout.GuestCheckoutTest -->
+      </class> <!-- com.nykaa.rating.ProductRatingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
