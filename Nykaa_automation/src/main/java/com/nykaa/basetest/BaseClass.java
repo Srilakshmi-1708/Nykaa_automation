@@ -42,8 +42,8 @@ public class BaseClass {
 		@BeforeClass(groups= {"smokeTest","regressionTest"})
 		public void configBC() throws Throwable {
 			System.out.println("==Launch the BROWSER==");
-			//String BROWSER=fLib.getDataFromPropertiesFile("browser");
-			String BROWSER=System.getProperty("browser",fLib.getDataFromPropertiesFile("browser"));
+			String BROWSER=fLib.getDataFromPropertiesFile("browser");
+			//String BROWSER=System.getProperty("browser",fLib.getDataFromPropertiesFile("browser"));
 	          
 		     if(BROWSER.equals("chrome")) {
 		    	 driver=new ChromeDriver();
@@ -58,7 +58,8 @@ public class BaseClass {
 		    	 driver=new ChromeDriver();
 		     }
 		    sdriver=driver;
-		    UtilityClassObject.setdriver(driver);  
+		    UtilityClassObject.setdriver(driver);
+		    wLib.toMaximize(driver);
 		} 
 		
 		@BeforeMethod(groups= {"smokeTest","regressionTest"})
