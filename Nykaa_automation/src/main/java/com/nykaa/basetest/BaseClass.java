@@ -66,7 +66,7 @@ public class BaseClass {
 		public void configBM() throws Throwable {
 			System.out.println("=Login=");
 			LoginPage lp=new LoginPage(driver);
-			
+			String URL=System.getProperty("url",fLib.getDataFromPropertiesFile("url"));
 			
 		}
 		
