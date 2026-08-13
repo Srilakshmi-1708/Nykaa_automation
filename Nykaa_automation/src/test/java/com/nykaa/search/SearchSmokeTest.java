@@ -18,14 +18,14 @@ public class SearchSmokeTest extends BaseClass {
 		HomePage hp=new HomePage(driver);
 		SearchResultPage srp=new SearchResultPage(driver);
 		wLib.waitForPageToLoad(driver);
-		driver.get(fLib.getDataFromPropertiesFile("URL"));
+		driver.get(fLib.getDataFromPropertiesFile("url"));
 		
-		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("URL")),"home page not displayed");
+		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("url")),"home page not displayed");
 		UtilityClassObject.getTest().log(Status.INFO, "homepage displayed sucessfully");
 		System.out.println("home page displayed");
 		
 		hp.getSearchTF().click();
-		hp.getSearchTF().sendKeys(fLib.getDataFromPropertiesFile("searchData"),Keys.ENTER);
+		hp.getSearchTF().sendKeys(eLib.getDataFromExcel("Search", 0, 0),Keys.ENTER);
 		
 		Assert.assertTrue(srp.getSearchResult().getText().contains("Best Lip Makeup Online"),"search result not displayed or wrong search result displayed");
 		UtilityClassObject.getTest().log(Status.INFO, "Search result displayed successfully");

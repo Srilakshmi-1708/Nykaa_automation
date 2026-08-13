@@ -15,8 +15,8 @@ public class CategoriesSmokeTest extends BaseClass {
 		HomePage hp=new HomePage(driver);
 		wLib.waitForPageToLoad(driver);
 		
-		driver.get(fLib.getDataFromPropertiesFile("URL"));
-		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("URL")),"home page not displayed");
+		driver.get(fLib.getDataFromPropertiesFile("url"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("url")),"home page not displayed");
 		UtilityClassObject.getTest().log(Status.INFO, "homepage displayed sucessfully");
 		System.out.println("home page displayed");
 		

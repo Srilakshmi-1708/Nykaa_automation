@@ -17,8 +17,8 @@ public class ProductListing extends BaseClass{
 		wLib.waitForPageToLoad(driver);
 		HairCategoryDropDownPage hcdp=new HairCategoryDropDownPage(driver);
 		
-		driver.get(fLib.getDataFromPropertiesFile("URL"));
-		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("URL")),"home page not displayed");
+		driver.get(fLib.getDataFromPropertiesFile("url"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("url")),"home page not displayed");
 		UtilityClassObject.getTest().log(Status.INFO, "homepage displayed sucessfully");
 		System.out.println("home page displayed");
 		
