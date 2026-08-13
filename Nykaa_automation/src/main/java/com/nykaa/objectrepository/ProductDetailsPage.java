@@ -51,6 +51,17 @@ public class ProductDetailsPage {
 	@FindBy(xpath="//div[@id='product-list-wrap']/descendant::a[1]/descendant::h2")
 	private WebElement productName;
 	
+	@FindBy(xpath = "//span[@class='sort-name']")
+	private WebElement sortByDropdown;
+	public WebElement getSortByDropdown() {
+		return sortByDropdown;
+	}
+	
+	@FindBy(xpath = "(//div[@id='product-list-wrap']/div[@class='productWrapper css-17nge1h']/descendant::h2)[1]")
+	private WebElement firstProductName;
+	public WebElement getFirstProductName() {
+		return firstProductName;
+	}
 //	@FindBy(xpath="//span[.='Add to Bag']/parent::button")
 //	private WebElement addToBagButton;
 	

@@ -56,6 +56,12 @@ public class HomePage{
 	@FindBy(xpath = "//a[text()='brands']")
 	private WebElement brandsMenu;
 	
+	@FindBy(xpath = "(//div[@class='MegaDropdowntopWrapper']/descendant::div[@class='megaDropdown']/ul[@role='list']/descendant::a[text()='Shampoo'])[1]")
+	private WebElement shampooLink;
+	public WebElement getShampooLink() {
+		return shampooLink;
+	}
+	
 	public void logout() {
 	Actions a=new Actions(driver);
 	a.moveToElement(profileImg).perform();

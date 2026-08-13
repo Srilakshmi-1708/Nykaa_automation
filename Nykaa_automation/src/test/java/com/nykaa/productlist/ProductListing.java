@@ -5,8 +5,8 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 import com.nykaa.basetest.BaseClass;
-import com.nykaa.objectrepository.HairCategoryDropDownPage;
 import com.nykaa.objectrepository.HomePage;
+import com.nykaa.objectrepository.ProductDetailsPage;
 import com.nykaa.webdriverutility.UtilityClassObject;
 
 public class ProductListing extends BaseClass{
@@ -14,8 +14,8 @@ public class ProductListing extends BaseClass{
 	public void productListingTest() throws Throwable {
 		
 		HomePage hp=new HomePage(driver);
+		ProductDetailsPage pdp=new ProductDetailsPage(driver);
 		wLib.waitForPageToLoad(driver);
-		HairCategoryDropDownPage hcdp=new HairCategoryDropDownPage(driver);
 		
 		driver.get(fLib.getDataFromPropertiesFile("url"));
 		Assert.assertTrue(driver.getCurrentUrl().contains(fLib.getDataFromPropertiesFile("url")),"home page not displayed");
@@ -29,20 +29,20 @@ public class ProductListing extends BaseClass{
 		System.out.println("hair category page displayed");
 		
 		wLib.mousemoveOnElement(driver, hp.getHairMenu());
-		hcdp.getShampooLink().click();
+		hp.getShampooLink().click();
 		wLib.switchToTabOnUrl(driver, "shampoo");
 		Assert.assertTrue(driver.getCurrentUrl().contains("shampoo"),"shampoo category page not displayed");
 		UtilityClassObject.getTest().log(Status.INFO, "shampoo category page displayed sucessfully");
 		System.out.println("shampoo category page displayed");
 		
-		wLib.scrollToElement(driver, hcdp.getSortByDropdown());
+		wLib.scrollToElement(driver, pdp.getSortByDropdown());
 		System.out.println("sort by dropdown is visible");
-		Assert.assertTrue(hcdp.getSortByDropdown().isDisplayed(),"shampoo category page sort by dropdown not displayed");
+		Assert.assertTrue(pdp.getSortByDropdown().isDisplayed(),"shampoo category page sort by dropdown not displayed");
 		UtilityClassObject.getTest().log(Status.INFO, "shampoo category page sort by dropdown displayed sucessfully");
 		System.out.println("sort by dropdown is visible");
 		
-		wLib.scrollToElement(driver, hcdp.getFirstProductOfShampooCategory());
-		Assert.assertTrue(hcdp.getFirstProductOfShampooCategory().getText().contains("shampoo"),"revelent shmapoo product not displayed for shampoo category page");
+		wLib.scrollToElement(driver, pdp.getFirstProductName());
+		Assert.assertTrue(pdp.getFirstProductName().getText().contains("shampoo"),"revelent shmapoo product not displayed for shampoo category page");
 		UtilityClassObject.getTest().log(Status.INFO, "revelent shmapoo product displayed sucessfully for shampoo category page");
 		System.out.println("revelent shmapoo product displayed successfully for shampoo category page");
 		
