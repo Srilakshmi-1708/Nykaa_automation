@@ -71,9 +71,11 @@ public class BaseClass {
 		}
 		
 		@AfterMethod(groups= {"smokeTest","regressionTest"})
-		public void configAM() {
+		public void configAM() throws Throwable {
 			System.out.println("=Logout=");
 			HomePage hp=new HomePage(driver);
+			FileUtility fLib = new FileUtility();
+			driver.get(fLib.getDataFromPropertiesFile("url"));
 			
 		}
 		
