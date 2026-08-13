@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nykaa.login.NykaaSmokeTest01_LoginSendOTP">
+      <class name="com.nykaa.login.BrowseAddToBagRegistrationE2ETest">
         <methods>
-          <include name="verifyLoginWithValidMobileAndSendOTP"/>
           <include name="configAM"/>
           <include name="configBM"/>
+          <include name="browseAddToBag_thenRegisterViaMobileOTP"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBC"/>
           <include name="configBS"/>
         </methods>
-      </class> <!-- com.nykaa.login.NykaaSmokeTest01_LoginSendOTP -->
+      </class> <!-- com.nykaa.login.BrowseAddToBagRegistrationE2ETest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

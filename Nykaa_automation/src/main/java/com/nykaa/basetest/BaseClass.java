@@ -66,16 +66,15 @@ public class BaseClass {
 		public void configBM() throws Throwable {
 			System.out.println("=Login=");
 			LoginPage lp=new LoginPage(driver);
-			
-			
+			String URL=System.getProperty("url",fLib.getDataFromPropertiesFile("url"));
+			driver.navigate().to(URL);
+			wLib.waitForPageToLoad(driver);
 		}
 		
 		@AfterMethod(groups= {"smokeTest","regressionTest"})
 		public void configAM() throws Throwable {
 			System.out.println("=Logout=");
 			HomePage hp=new HomePage(driver);
-			FileUtility fLib = new FileUtility();
-			driver.get(fLib.getDataFromPropertiesFile("url"));
 			
 		}
 		

@@ -100,5 +100,10 @@ public class LoginPage extends WebDriverUtility { // Rule 1: create a seperate j
 		continueButton.click();
 
 	}
+	
+	public boolean isOtpFieldDisplayed() {
+		waitforElementPresent(driver, otpField);
+		return otpField.isDisplayed();
+	}
 
 }
