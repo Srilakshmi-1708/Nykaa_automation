@@ -96,6 +96,10 @@ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	 act.doubleClick(element).perform();
  }
  
+ public String getUrl(WebDriver driver) {
+		return driver.getCurrentUrl();
+	}
+ 
  
 }
 
