@@ -67,8 +67,10 @@ public class BaseClass {
 			System.out.println("=Login=");
 			LoginPage lp=new LoginPage(driver);
 			String URL=System.getProperty("url",fLib.getDataFromPropertiesFile("url"));
+
 			driver.navigate().to(URL);
 			wLib.waitForPageToLoad(driver);
+
 		}
 		
 		@AfterMethod(groups= {"smokeTest","regressionTest"})
