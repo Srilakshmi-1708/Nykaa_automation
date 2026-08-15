@@ -126,19 +126,27 @@ public class GuestCheckoutPage {
 			driver.switchTo().defaultContent();
 		}
 	}
-
 	public void selectCashOnDelivery() {
-		switchToPaymentFrameIfPresent();
+		driver.switchTo().defaultContent();   // make sure we're in the main page, no iframe switch needed
 		safeClick(cashOnDeliveryOption);
 	}
 
-	
 	public boolean isPlaceOrderButtonVisible() {
-		// Already inside the payment iframe from selectCashOnDelivery() -
-		// switching again here would be a no-op if still in context, but is
-		// called explicitly in case this method is ever used on its own.
-		switchToPaymentFrameIfPresent();
+		driver.switchTo().defaultContent();   // same here - Place Order is also in main DOM
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrderButton)).isDisplayed();
 	}
+//	public void selectCashOnDelivery() {
+//		switchToPaymentFrameIfPresent();
+//		safeClick(cashOnDeliveryOption);
+//	}
+
+	
+//	public boolean isPlaceOrderButtonVisible() {
+//		// Already inside the payment iframe from selectCashOnDelivery() -
+//		// switching again here would be a no-op if still in context, but is
+//		// called explicitly in case this method is ever used on its own.
+//		switchToPaymentFrameIfPresent();
+//		return wait.until(ExpectedConditions.visibilityOfElementLocated(placeOrderButton)).isDisplayed();
+//	}
 
 }

@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,6 +40,9 @@ public class ProductDetailsPage {
 	// Add to Bag button
 	private final By addToBagButton = By.xpath("//button[.//span[contains(normalize-space(),'Add to Bag')]]");
 
+	private final By reviewsSection = By.xpath("//div[@id='reviewQ&ASection']");
+	private final By overallRatingValue = By.xpath("//div[@id='reviewQ&ASection']//strong");
+	
 	@FindBy(xpath = "//div[@id='product-list-wrap']/descendant::a[1]")
 	private WebElement lisptick;
 
@@ -60,6 +64,7 @@ public class ProductDetailsPage {
 //		return addToBagButton;
 //	}
 
+	
 	public void openFirstSearchResult() {
 
 		List<WebElement> products = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(firstProductTile));
@@ -142,6 +147,26 @@ public class ProductDetailsPage {
 		return productName;
 	}
 	
+    public void scrollToReviewsSection() {
+
+		WebElement section = wait.until(
+				ExpectedConditions.presenceOfElementLocated(reviewsSection));
+
+		((JavascriptExecutor) driver).executeScript(
+				"arguments[0].scrollIntoView({block:'center'});",
+				section);
+	}
+
+
+	public String getOverallRatingText() {
+		scrollToReviewsSection();
+		WebElement rating = wait.until(ExpectedConditions.visibilityOfElementLocated(overallRatingValue));
+		return rating.getText().trim();
+	}
+
+	public double getOverallRatingValue() {
+		return Double.parseDouble(getOverallRatingText());
+	}
 	
 	public WebElement getLisptick() {
 		return lisptick;
